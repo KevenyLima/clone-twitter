@@ -37,6 +37,9 @@ const Main: React.FC = () => {
         <EmailIcon />
       </BottomMenu>
       <Tweet/>
+      <Tweet/>
+      <Tweet/>
+      <Tweet/>
     </Container>
   );
 };

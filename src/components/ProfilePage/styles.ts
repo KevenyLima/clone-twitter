@@ -60,6 +60,11 @@ export const ProfileFollows = styled.div`
 export const Tweets = styled.div`
     display:flex;
     justify-content:center;
+    border-bottom: 2px solid var(--twitter);
+    padding: 11px 0 15px;
+    &:hover{
+        background:var(--twitter-dark-hover);
+    }
     >div{
         color:var(--twitter);
         font-weight:bold;
