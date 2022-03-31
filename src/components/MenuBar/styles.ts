@@ -29,11 +29,6 @@ export const Container = styled.div`
 
 `
 
-export const MenuBar = styled.div`
-
-`
-
-
 export const Topside = styled.div`
     display:flex;
     flex-direction:column;
@@ -56,14 +51,16 @@ export const MenuButton = styled.button`
     align-items:center;
     flex-shrink:0;
     padding: 8px 0;
-    //pesuisar sobre esta propriedade
-    //nao vi efeito nenhum
+    //retira o outline 
+    //modifica
+    //outline-style, outline-width and outline-color
     outline:0;
     cursor:pointer;
     border-radius:25px;
     &:hover{
         background:var(--twitter-dark-hover);
     }
+    //no hover ou caso o butao tenha uma class active adiciona esse codigo
     &:hover,&.active{
         span,svg{
             color:var(--twitter);
@@ -98,7 +95,9 @@ export const MenuButton = styled.button`
         }
         @media (min-width:1280px) {
             width:100%;
+            //desconsidera o valor que antes foi atribuido
             height:unset;
+            
             >span{
                 display:inline;
             }
@@ -136,7 +135,7 @@ export const Avatar = styled.div`
 export const ProfileData = styled.div`
     display:none;
 
-    //
+    //so aparece quando a tela tem mais que 1280px
     @media(min-width:1280px){
         display:flex;
         flex-direction:column;
@@ -152,7 +151,7 @@ export const ProfileData = styled.div`
 export const ExitIcon = styled(ExitToApp)`
 
     display:none;
-
+    //icon so apare quando a tela tem mais que 1280px
     @media (min-width: 1280px) {
         display:inline-block;
         width:25px;
